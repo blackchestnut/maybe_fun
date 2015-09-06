@@ -22,7 +22,46 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+' foo   '.with(&:strip) # => 'foo'
+nil.with(&:strip)       # => nil
+```
+
+```
+'foo'.do { puts 'bar' }
+# bar
+# "foo"
+
+nil.do { puts 'bar' }
+# nil
+```
+
+```
+true.if_true { puts 'baz' }
+# baz
+# true
+
+false.if_true { puts 'baz' }
+# false
+```
+
+```
+false.if_false { puts 'quux' }
+# quux
+# true
+
+true.if_false { puts 'quux' }
+# true
+```
+
+```
+1.if_nil { puts 'bat' }
+# 1
+
+nil.if_nil { puts 'bat' }
+# bat
+# true
+```
 
 ## Development
 
@@ -32,7 +71,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/maybe_fun. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/blackchestnut/maybe_fun. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
