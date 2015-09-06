@@ -7,7 +7,7 @@ class Object
   alias :unless_null :do
   alias :also :do
 
-  def if_nill
+  def if_nil
     yield if nil?
     self
   end

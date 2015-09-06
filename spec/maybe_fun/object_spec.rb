@@ -16,8 +16,8 @@ describe Object do
     end
   end
 
-  describe '#if_nill' do
-    subject { object.if_nill { self.foo } }
+  describe '#if_nil' do
+    subject { object.if_nil { self.foo } }
     before { subject }
 
     context 'not nil' do
